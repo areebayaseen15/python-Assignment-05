@@ -218,7 +218,7 @@ def retrieve_data_page():
 # ------------------ Main ------------------ #
 def main():
     st.set_page_config(page_title="Secure Encryption App", page_icon="🔐")
-    st.title("🔐 Secure Multi-Entry Data Manager")
+    st.title("🔐 Secure Multi-Entry Data Encryption App")
 
     if st.session_state.app_data.get("logged_in") is not None:
         st.session_state.page = "home"
