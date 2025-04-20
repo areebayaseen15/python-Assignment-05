@@ -118,6 +118,14 @@ def home_page():
         st.markdown("""
         This app helps you store, encrypt, retrieve, and manage your sensitive data entries securely.
         """)
+
+        st.subheader("Features of the App")
+        st.markdown("""
+        - **Secure Data Storage:** Encrypt and store your sensitive data safely.
+        - **Easy-to-Use Interface:** Simple, user-friendly design to help you manage your data.
+        - **Multi-User Support:** Each user has their own encrypted data entries, keeping your data private.
+        """)
+
     elif choice == "💾 Store New Data":
         insert_data_page()
     elif choice == "🔍 Retrieve Data":
@@ -154,37 +162,6 @@ def insert_data_page():
             st.success(f"Data '{title}' stored successfully!")
         else:
             st.error("Please fill all fields")
-
-# ------------------ Retrieve Data Page ------------------ #
-# def retrieve_data_page():
-#     st.header("🔍 Retrieve Your Data")
-#     passkey_input = st.text_input("Enter Your Passkey", type="password")
-#     user = st.session_state.app_data["logged_in"]
-#     # user_entries = st.session_state.app_data["stored_data"].get(user, [])
-
-#     # if not user_entries:
-#     #     st.warning("You have no saved data.")
-#     # return
-
-#     if st.button("Retrieve"):
-#         hashed_input = hash_passkey(passkey_input).decode()
-#         found = False
-
-#         if user in st.session_state.app_data["stored_data"]:
-#             for data in st.session_state.app_data["stored_data"][user]:
-#                 if data["passkey"] == hashed_input:
-#                     decrypted = decrypt_text(data["encrypted_text"])
-#                     st.success(f"Decrypted Data: {decrypted}")
-#                     reset_failed_attempt()
-#                     found = True
-#                     break
-
-#         if not found:
-#             st.session_state.failed_attempts += 1
-#             st.error(f"Wrong passkey! Attempts: {st.session_state.failed_attempts}/3")
-#             if st.session_state.failed_attempts >= 3:
-#                 st.warning("Too many attempts! Redirecting...")
-#                 st.session_state.page = "register"
 
 # ------------------ Retrieve Data Page ------------------ #
 def retrieve_data_page():
