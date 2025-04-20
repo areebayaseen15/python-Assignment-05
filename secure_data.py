@@ -124,6 +124,9 @@ def home_page():
         - **Secure Data Storage:** Encrypt and store your sensitive data safely.
         - **Easy-to-Use Interface:** Simple, user-friendly design to help you manage your data.
         - **Multi-User Support:** Each user has their own encrypted data entries, keeping your data private.
+        - **Data Retrieval:** Easily retrieve and decrypt your stored data using a passkey.
+        - **Data Deletion:** Remove any stored data entries you no longer need.
+        - **Secure Encryption:** Your data is encrypted using strong encryption algorithms, ensuring its safety.
         """)
 
     elif choice == "💾 Store New Data":
