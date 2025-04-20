@@ -1,5 +1,5 @@
-streamlit 
-cryptography.fernet 
+streamlit
+cryptography
 hashlib
 time
 json
