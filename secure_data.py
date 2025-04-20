@@ -63,6 +63,8 @@ def register_page():
         if new_username and new_password:
             if new_username in st.session_state.app_data["users"]:
                 st.error("Username already exists")
+            elif len(new_password) < 8:
+               st.error("❌ Password must be at least 8 characters long.")    
             else:
                 st.session_state.app_data["users"][new_username] = hash_passkey(new_password).decode()
                 save_app_data(st.session_state.app_data)
